@@ -1,13 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+// import Test from './Test'
+// import App from './App';
+import HelloComponent from './component/HelloComponent';
 import reportWebVitals from './reportWebVitals';
+
+// const HelloComponent = () =>{
+//   return HelloComponent
+// }
+
+class StateFullComponent extends React.Component{
+  render(){
+    return<p>StateFullComponent</p>
+  }
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <HelloComponent />
   </React.StrictMode>
 );
 

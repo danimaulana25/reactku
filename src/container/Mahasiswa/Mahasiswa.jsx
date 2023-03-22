@@ -66,46 +66,62 @@ class Mahasiswa extends Component {
         return (
             <div className="post-mahasiswa">
                 <div className="form pb-2 border-bottom">
-                    <h3>Tambah Mahasiswa</h3>
+                    <h3 className="row justify-content-center">Tambah Data Mahasiswa</h3>
                     <div className="form-group row">
-                        <label htmlFor="NIM" className="col-sm-2 col-form-label">NIM</label>
-                        <div className="col-sm-3">
+                        <label htmlFor="NIM" className="col-sm-2 col-form-label mb-2">NIM</label>
+                        <div className="col-sm-4">
                             <textarea className="form-control" name="NIM" id="NIM" rows="1" onChange={this.handleTambahMahasiswa}></textarea>
                         </div>
                     </div>
                     <div className="form-group row">
-                        <label htmlFor="nama" className="col-sm-2 col-form-label">Nama</label>
-                        <div className="col-sm-5">
+                        <label htmlFor="nama" className="col-sm-2 col-form-label mb-2">Nama</label>
+                        <div className="col-sm-4">
                             <textarea className="form-control" name="nama" id="nama" rows="1" onChange={this.handleTambahMahasiswa}></textarea>
                         </div>
                     </div>
                     <div className="form-group row">
-                        <label htmlFor="alamat" className="col-sm-2 col-form-label">Alamat</label>
-                        <div className="col-sm-5">
+                        <label htmlFor="alamat" className="col-sm-2 col-form-label mb-3">Alamat</label>
+                        <div className="col-sm-4">
                             <textarea className="form-control" name="alamat" id="alamat" onChange={this.handleTambahMahasiswa}></textarea>
                         </div>
                     </div>
                     <div className="form-group row">
-                        <label htmlFor="hp" className="col-sm-2 col-form-label">No Handphone</label>
-                        <div className="col-sm-3">
+                        <label htmlFor="hp" className="col-sm-2 col-form-label mb-2">No Handphone</label>
+                        <div className="col-sm-4">
                             <textarea className="form-control" name="hp" id="hp" rows="1" onChange={this.handleTambahMahasiswa}></textarea>
                         </div>
                     </div>
                     <div className="form-group row">
-                        <label htmlFor="angkatan" className="col-sm-2 col-form-label">Angkatan</label>
-                        <div className="col-sm-3">
-                            <input type="number" className="form-control" name="angkatan" id="angkatan" rows="1" onChange={this.handleTambahMahasiswa} />
+                        <label htmlFor="angkatan" className="col-sm-2 col-form-label mb-2">Angkatan</label>
+                        <div className="col-sm-4">
+                            <select htmlFor="angkatan" className="form-control" name="angkatan" id="angkatan" onChange={this.handleTambahMahasiswa}>
+                                <option>Pilih tahun angkatan</option>
+                                <option value="2015">2015</option>
+                                <option value="2016">2016</option>
+                                <option value="2017">2017</option>
+                                <option value="2018">2018</option>
+                                <option value="2019">2019</option>
+                                <option value="2020">2020</option>
+                                <option value="2021">2021</option>
+                                <option value="2022">2022</option>
+                                <option value="2023">2023</option>
+                            </select>
                         </div>
                     </div>
                     <div className="form-group row">
-                        <label htmlFor="status" className="col-sm-2 col-form-label">Status</label>
-                        <div className="col-sm-3">
-                            <textarea className="form-control" name="status" id="status" rows="1" onChange={this.handleTambahMahasiswa}></textarea>
+                        <label htmlFor="status" className="col-sm-2 col-form-label mb-2">Status</label>
+                        <div className="col-sm-4">
+                            <select htmlFor="angkatan" className="form-control" name="status" id="status" onChange={this.handleTambahMahasiswa}>
+                                <option>Pilih status mahasiswa</option>
+                                <option value="Aktif">Aktif</option>
+                                <option value="Lulus">Lulus</option>
+                                <option value="Cuti">Cuti</option>
+                            </select>
                         </div>
                     </div>
-                    <button type="submit" className="btn btn-success" onClick={this.handleTombolSimpan}>Simpan</button>
+                    <button type="submit" className="btn btn-primary" onClick={this.handleTombolSimpan}>Simpan</button>
                 </div>
-                <h2>Daftar Mahasiswa</h2>
+                <h3 className="row justify-content-center">List Data Mahasiswa</h3>
                 {
                     this.state.listMahasiswa.map(mahasiswa => {     // looping dan masukkan untuk setiap data yang ada di listMahasiswa ke variabel mahasiswa
                         return <Mhs key={mahasiswa.id} nama={mahasiswa.nama} nim={mahasiswa.NIM} alamat={mahasiswa.alamat} hp={mahasiswa.hp} angkatan={mahasiswa.angkatan} status={mahasiswa.status} idMahasiswa={mahasiswa.id} hapusMahasiswa={this.handleHapusMahasiswa} />

@@ -1,7 +1,8 @@
 import React, { Component } from "react";
+import Footer from "./container/Mahasiswa/Footer";
+import Header from "./container/Mahasiswa/Header";
 import Mahasiswa from "./container/Mahasiswa/Mahasiswa";
-import Footer from "./pages/Footer";
-import Header from "./pages/Header";
+
 
 class App extends Component {
   render() {

@@ -13,7 +13,7 @@ const Mhs = (props) => {
                 <p className="hp-mahasiswa">No Handphone : {props.hp}</p>
                 <p className="angkatan-mahasiswa">Angkatan : {props.angkatan}</p>
                 <p className="status-mahasiswa">Status : {props.status}</p>
-                <button className="btn btn-sm btn-warning" onClick={() => props.hapusMahasiswa(props.idMahasiswa)}>Hapus Mahasiswa</button>
+                <button className="btn btn-sm btn-danger" onClick={() => props.hapusMahasiswa(props.idMahasiswa)}>Hapus Mahasiswa</button>
             </div>
         </div>
     )
